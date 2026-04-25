@@ -4,12 +4,11 @@
 Jilani Home Site Dev is a frontend web application for real estate and property listings. The platform allows users to browse available property listings, view detailed information for specific properties, explore pricing plans, and manage their accounts through authentication pages (login, signup, password recovery).
 
 ## Technology Stack
-- **Core Library**: React 18
+- **Core Library**: React 18+ (Vite 6)
 - **Routing**: React Router v7
-- **Styling & CSS**: TailwindCSS 4, Emotion
-- **UI Components**: Radix UI primitives, Material UI (MUI), and custom UI components.
+- **Styling**: TailwindCSS v4 (using `@theme` and native variables)
+- **Aesthetic**: "Liquid Glass" (High blur, frosted borders, glossy gradients)
 - **Animations**: Framer Motion
-- **Build Tool**: Vite 6
 
 ## Application Architecture
 The project follows a standard React application structure:

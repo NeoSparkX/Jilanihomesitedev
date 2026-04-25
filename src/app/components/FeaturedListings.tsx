@@ -118,7 +118,7 @@ function FeaturedCard({ listing, state }: { listing: typeof LISTINGS[0]; state: 
           </div>
           <Link
             to={`/listings/${listing.id}`}
-            className="text-xs text-[#3B82F6] hover:text-white border border-[#3B82F6]/30 hover:border-white/20 px-3 py-1.5 rounded-lg transition-all"
+            className="text-xs text-white bg-[#3B82F6] hover:bg-[#2563EB] px-4 py-2 rounded-lg transition-all font-semibold keep-white"
             onClick={e => e.stopPropagation()}
           >
             View →
@@ -340,7 +340,7 @@ export default function FeaturedListings() {
         <div className="mt-10 sm:mt-12 flex justify-center">
           <Link
             to="/listings"
-            className="text-white border border-white/20 hover:bg-white/5 hover:border-white/40 px-8 py-3 rounded-full text-sm font-semibold transition-all backdrop-blur-sm"
+            className="text-white bg-black/60 dark:bg-transparent border border-white/20 hover:bg-black/70 dark:hover:bg-white/5 hover:border-white/40 px-8 py-3 rounded-full text-sm font-semibold transition-all backdrop-blur-sm keep-white"
           >
             View All Listings
           </Link>

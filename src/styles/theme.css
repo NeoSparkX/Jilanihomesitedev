@@ -261,8 +261,9 @@ html.light .via-\[\#0D0D0D\],
 html.light .via-\[\#111111\] { --tw-gradient-via: #F5F6F8 !important; }
 html.light .to-\[\#0D0D0D\] { --tw-gradient-to: #F5F6F8 !important; }
 
-/* Text colors */
-html.light .text-white { color: #0D0D0D !important; }
+/* Text colors - modified to allow buttons to keep white text */
+html.light .text-white:not(.keep-white):not(button):not([class*="btn"]):not([class*="button"]) { color: #0D0D0D !important; }
+html.light .keep-white { color: #FFFFFF !important; }
 html.light .text-gray-300,
 html.light .text-\[\#D1D5DB\] { color: #374151 !important; }
 html.light .text-gray-400,
@@ -334,18 +335,23 @@ html.light .hover\:bg-white\/50:hover { background-color: rgba(13,13,13,0.28) !i
 /* Card & section hairline dividers using /06 opacity */
 html.light .border-white\/\[0\.06\] { border-color: rgba(13,13,13,0.08) !important; }
 
-/* SVG fill-white (e.g. Play icon in Hero) */
-html.light .fill-white { fill: #0D0D0D !important; }
+/* SVG fill-white (e.g. Play icon in Hero) - modified to allow keeping white fill */
+html.light .fill-white:not(.keep-white) { fill: #0D0D0D !important; }
+html.light .keep-white.fill-white { fill: #FFFFFF !important; }
 
 /* ── Hover-state text ───────────────────────────────────────────────────────
    hover:text-white would produce #FFF on a white surface — completely
    invisible. Map it to near-black so hover feedback is preserved.         */
-html.light .hover\:text-white:hover { color: #0D0D0D !important; }
+html.light .hover\:text-white:not(.keep-white):hover { color: #0D0D0D !important; }
 
 /* ── Hover-state backgrounds ───────────────────────────────────────────────
    White-alpha hover layers are invisible on a white surface.              */
-html.light .hover\:bg-white\/5:hover  { background-color: rgba(13,13,13,0.05) !important; }
-html.light .hover\:bg-white\/15:hover { background-color: rgba(13,13,13,0.08) !important; }
+html.light .hover\:bg-white\/5:not(.keep-white):hover  { background-color: rgba(13,13,13,0.05) !important; }
+html.light .hover\:bg-white\/10:not(.keep-white):hover { background-color: rgba(13,13,13,0.08) !important; }
+html.light .hover\:bg-white\/15:not(.keep-white):hover { background-color: rgba(13,13,13,0.08) !important; }
+html.light .keep-white.hover\:bg-white\/5:hover  { background-color: rgba(255,255,255,0.05) !important; }
+html.light .keep-white.hover\:bg-white\/10:hover { background-color: rgba(255,255,255,0.10) !important; }
+html.light .keep-white.hover\:bg-white\/15:hover { background-color: rgba(255,255,255,0.15) !important; }
 
 /* ── Hover-state borders ───────────────────────────────────────────────────  */
 html.light .hover\:border-white\/20:hover { border-color: rgba(13,13,13,0.14) !important; }

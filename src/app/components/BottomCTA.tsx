@@ -28,7 +28,7 @@ export default function BottomCTA() {
             Stop guessing. Unlock verified listings and connect directly with space owners worldwide.
           </p>
           
-          <Link to="/signup" className="inline-flex items-center justify-center gap-3 bg-[#3B82F6] hover:bg-[#2563EB] text-white text-lg font-bold px-10 py-5 rounded-full transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:shadow-[0_0_50px_rgba(59,130,246,0.5)] group hover:-translate-y-1">
+          <Link to="/signup" className="inline-flex items-center justify-center gap-3 bg-[#3B82F6] hover:bg-[#2563EB] text-white text-lg font-bold px-10 py-5 rounded-full transition-all shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:shadow-[0_0_50px_rgba(59,130,246,0.5)] group hover:-translate-y-1 keep-white">
             Start Exploring
             <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
           </Link>

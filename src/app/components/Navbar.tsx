@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router';
 import { Menu, X, Sun, Moon } from 'lucide-react';
@@ -18,42 +18,42 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between gap-3 sm:gap-4 w-full">
         {/* Left: Logo Box (Bento) */}
-        <Link to="/" className="flex items-center gap-2 sm:gap-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-1.5 pr-4 sm:pr-5 shadow-lg h-[52px] hover:bg-white/10 transition-colors">
+        <Link to="/" className="flex items-center gap-2 sm:gap-3 bg-black/40 dark:bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl sm:rounded-2xl p-1 sm:p-1.5 pr-3 sm:pr-5 shadow-lg h-[44px] sm:h-[52px] hover:bg-black/50 dark:hover:bg-white/10 transition-colors shrink-0">
           <ImageWithFallback 
             src="/src/imports/jilanihome_logo.png" 
             alt="Logo" 
-            className="w-10 h-10 rounded-xl object-cover shadow-sm"
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl object-cover shadow-sm"
           />
-          <span className="font-['Space_Grotesk'] font-bold text-lg sm:text-xl tracking-wide text-white whitespace-nowrap hidden min-[360px]:block">Jilani Home</span>
+          <span className="font-['Space_Grotesk'] font-bold text-base sm:text-xl tracking-wide text-white keep-white whitespace-nowrap hidden min-[320px]:block">Jilani Home</span>
         </Link>
 
         {/* Middle: Nav Links Box (Bento) */}
-        <nav className="hidden md:flex items-center gap-1 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-1.5 shadow-lg h-[52px]">
-          <Link to="/listings" className="text-gray-300 hover:text-white hover:bg-white/10 px-5 py-2 rounded-xl transition-all text-sm font-medium h-10 flex items-center">Browse Spaces</Link>
-          <a href="/#how-it-works" className="text-gray-300 hover:text-white hover:bg-white/10 px-5 py-2 rounded-xl transition-all text-sm font-medium h-10 flex items-center">How It Works</a>
-          <Link to="/pricing" className="text-gray-300 hover:text-white hover:bg-white/10 px-5 py-2 rounded-xl transition-all text-sm font-medium h-10 flex items-center">Pricing</Link>
+        <nav className="hidden md:flex items-center gap-1 bg-black/40 dark:bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-1.5 shadow-lg h-[52px]">
+          <Link to="/listings" className="text-white/80 hover:text-white hover:bg-white/10 px-5 py-2 rounded-xl transition-all text-sm font-medium h-10 flex items-center keep-white">Browse Spaces</Link>
+          <a href="/#how-it-works" className="text-white/80 hover:text-white hover:bg-white/10 px-5 py-2 rounded-xl transition-all text-sm font-medium h-10 flex items-center keep-white">How It Works</a>
+          <Link to="/pricing" className="text-white/80 hover:text-white hover:bg-white/10 px-5 py-2 rounded-xl transition-all text-sm font-medium h-10 flex items-center keep-white">Pricing</Link>
         </nav>
 
         {/* Right: Actions Box (Bento) */}
-        <div className="flex items-center gap-1 sm:gap-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-1.5 shadow-lg h-[52px]">
+        <div className="flex items-center gap-0.5 sm:gap-2 bg-black/40 dark:bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl sm:rounded-2xl p-1 sm:p-1.5 shadow-lg h-[44px] sm:h-[52px] shrink-0">
           <button
             onClick={toggle}
             aria-label="Toggle theme"
-            className="flex items-center justify-center w-10 h-10 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all"
+            className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 text-white/80 hover:text-white hover:bg-white/10 rounded-lg sm:rounded-xl transition-all keep-white"
           >
-            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            {theme === 'dark' ? <Sun className="w-4 h-4 sm:w-5 sm:h-5" /> : <Moon className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
-          <Link to="/login" className="hidden md:flex items-center justify-center text-sm font-medium text-gray-300 hover:text-white px-5 py-2 rounded-xl hover:bg-white/10 transition-all h-10">
+          <Link to="/login" className="hidden md:flex items-center justify-center text-sm font-medium text-white/80 hover:text-white px-5 py-2 rounded-xl hover:bg-white/10 transition-all h-10 keep-white">
             Login
           </Link>
-          <Link to="/signup" className="bg-[#3B82F6] hover:bg-[#2563EB] text-white text-sm font-medium px-4 sm:px-6 py-2 rounded-xl transition-all shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] whitespace-nowrap h-10 flex items-center justify-center">
+          <Link to="/signup" className="bg-[#3B82F6] hover:bg-[#2563EB] text-white text-xs sm:text-sm font-medium px-3 sm:px-6 py-1.5 sm:py-2 rounded-lg sm:rounded-xl transition-all shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] whitespace-nowrap h-8 sm:h-10 flex items-center justify-center keep-white">
             Sign Up
           </Link>
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden flex items-center justify-center w-10 h-10 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all"
+            className="md:hidden flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 text-white/80 hover:text-white hover:bg-white/10 rounded-lg sm:rounded-xl transition-all keep-white"
           >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
         </div>
       </div>
@@ -62,17 +62,20 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-[76px] left-4 right-4 bg-[#141414]/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-3 shadow-2xl md:hidden flex flex-col gap-1 z-50"
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
+            className="absolute top-[76px] left-4 right-4 bg-black/60 dark:bg-white/[0.03] backdrop-blur-[40px] border border-white/10 rounded-[2.5rem] p-4 shadow-[0_30px_70px_rgba(0,0,0,0.3)] dark:shadow-[0_30px_70px_rgba(0,0,0,0.5)] md:hidden flex flex-col gap-1 z-50 overflow-hidden"
           >
-            <Link to="/listings" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white hover:bg-white/10 px-4 py-3.5 rounded-xl transition-all text-base font-medium">Browse Spaces</Link>
-            <a href="/#how-it-works" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white hover:bg-white/10 px-4 py-3.5 rounded-xl transition-all text-base font-medium">How It Works</a>
-            <Link to="/pricing" onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white hover:bg-white/10 px-4 py-3.5 rounded-xl transition-all text-base font-medium">Pricing</Link>
-            <div className="h-px w-full bg-white/10 my-2" />
-            <Link to="/login" onClick={() => setIsOpen(false)} className="text-left text-gray-300 hover:text-white hover:bg-white/10 px-4 py-3.5 rounded-xl transition-all text-base font-medium">Login</Link>
+            {/* Glossy Reflection Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 dark:from-white/10 to-transparent pointer-events-none" />
+            
+            <Link to="/listings" onClick={() => setIsOpen(false)} className="relative text-white hover:bg-white/10 px-6 py-4 rounded-2xl transition-all text-lg font-bold keep-white">Browse Spaces</Link>
+            <a href="/#how-it-works" onClick={() => setIsOpen(false)} className="relative text-white bg-white/10 px-6 py-4 rounded-2xl transition-all text-lg font-bold keep-white">How It Works</a>
+            <Link to="/pricing" onClick={() => setIsOpen(false)} className="relative text-white hover:bg-white/10 px-6 py-4 rounded-2xl transition-all text-lg font-bold keep-white">Pricing</Link>
+            <div className="relative h-px w-full bg-white/10 dark:bg-white/5 my-2 mx-2" />
+            <Link to="/login" onClick={() => setIsOpen(false)} className="relative text-left text-white hover:bg-white/10 px-6 py-4 rounded-2xl transition-all text-lg font-bold keep-white">Login</Link>
           </motion.div>
         )}
       </AnimatePresence>
