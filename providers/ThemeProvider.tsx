@@ -5,10 +5,10 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 type Theme = 'dark' | 'light';
 type Ctx = { theme: Theme; toggle: () => void };
 
-const ThemeContext = createContext<Ctx>({ theme: 'dark', toggle: () => {} });
+const ThemeContext = createContext<Ctx>({ theme: 'light', toggle: () => {} });
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('dark');
+  const [theme, setTheme] = useState<Theme>('light');
   const [mounted, setMounted] = useState(false);
 
   // Read from localStorage only after mount (client-side)
