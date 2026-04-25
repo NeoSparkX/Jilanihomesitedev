@@ -1,5 +1,13 @@
 # Latest Changes
 
+## Next.js 15 App Router Migration (Latest)
+- **Framework Upgrade**: Successfully migrated the entire project from React Router / Vite 6 to Next.js 15 (App Router).
+- **Architecture Restructure**: Removed the `src/` directory entirely, restructuring routing into the `app/` directory and extracting UI into the `components/` directory.
+- **Tailwind v4 Integration**: Switched from `@tailwindcss/vite` to `@tailwindcss/postcss`, fully integrating Tailwind v4 with the Next.js build pipeline and maintaining the complex theme overrides.
+- **SSR & Hydration Fixes**: Implemented robust hydration guards (`suppressHydrationWarning`), polyfilled the `localStorage` object to prevent Node 25 SSR crashes, and fixed hydration mismatch errors in the framer-motion `FeaturedListings` carousel.
+- **Asset Relocation**: Relocated all `figma` and static image assets to `public/imports/` and removed legacy Vite asset resolver plugins.
+- **IDE Configuration**: Updated `tsconfig.json` to leverage `@/*` absolute paths and removed `tsconfig.node.json`.
+
 ## Redesign & Theme Optimization (2026-04-25)
 - **Liquid Glass Aesthetic**: Implemented a premium "Liquid Glass" design system across the Hero section, Navbar, and Info Strip. This includes high-blur backdrop filters, subtle glossy gradients, and frosted border treatments.
 - **Hero Section Overhaul**: Redesigned the Hero section for better mobile ergonomics. Reduced vertical height, rearranged primary CTAs to be side-by-side on mobile, and added support for high-legibility Light Mode.
