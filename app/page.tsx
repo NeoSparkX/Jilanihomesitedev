@@ -18,7 +18,7 @@ export default function HomePage() {
         <TrustStrip />
         <FeaturedListings />
         <HowItWorks />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <BottomCTA />
       </main>
       <Footer />

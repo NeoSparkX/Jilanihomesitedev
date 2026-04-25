@@ -7,18 +7,18 @@ import clsx from 'clsx';
 const steps = [
   {
     icon: Search,
-    title: "Browse Listings",
-    desc: "Explore our curated selection of premium spaces that perfectly fit your needs."
+    title: "তালিকা দেখুন",
+    desc: "আপনার প্রয়োজন অনুযায়ী বাছাই করা ভালো জায়গাগুলো দেখে নিন।"
   },
   {
     icon: Shield,
-    title: "Join the Network",
-    desc: "Create an account to gain exclusive access to exact locations and host contact details."
+    title: "অ্যাকাউন্ট খুলুন",
+    desc: "অ্যাকাউন্ট তৈরি করলে জায়গার বিস্তারিত তথ্য ও মালিকের যোগাযোগ নম্বর দেখতে পারবেন।"
   },
   {
     icon: Phone,
-    title: "Connect Directly",
-    desc: "Speak with space owners to arrange bookings and negotiations. No middlemen."
+    title: "সরাসরি কথা বলুন",
+    desc: "প্রতিটি লিস্টিংয়ের জন্য এককালীন ফি পরিশোধ করার পর, বুকিং এবং আলোচনার জন্য জায়গার মালিকদের সাথে সরাসরি কথা বলুন।"
   }
 ];
 
@@ -30,10 +30,10 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-20 space-y-4">
           <h2 className="font-['Space_Grotesk'] text-3xl md:text-5xl font-bold text-white">
-            How It <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#60A5FA]">Works</span>
+            কীভাবে <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#60A5FA]">কাজ করে</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A seamless process to find and secure premium spaces without the exorbitant agency fees.
+            প্রিমিয়াম স্পেস খুঁজে পেতে এবং বুকিং নিশ্চিত করতে একটি সহজ ও সাবলীল প্রক্রিয়া
           </p>
         </div>
 

@@ -45,14 +45,14 @@ export default function Hero() {
 
           <div className="flex flex-row items-center justify-center gap-2 sm:gap-5 pt-2 mb-4 md:mb-12 w-full max-w-[340px] sm:max-w-none mx-auto">
             <Link href="/listings" className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 sm:gap-2 bg-[#3B82F6] hover:bg-[#2563EB] text-white text-xs sm:text-base font-semibold px-2 sm:px-8 py-3.5 sm:py-4 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.25)] hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] group hover:-translate-y-0.5 keep-white">
-              Explore Spaces
+              প্রপার্টি খুঁজুন
               <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <a href="#how-it-works" className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 sm:gap-2 text-white bg-black/40 dark:bg-white/10 hover:bg-black/50 dark:hover:bg-white/20 border border-white/20 px-2 sm:px-8 py-3.5 sm:py-4 rounded-full backdrop-blur-md transition-all duration-300 text-xs sm:text-base font-semibold group hover:-translate-y-0.5 keep-white">
               <div className="bg-white/10 dark:bg-white/20 p-1 sm:p-1.5 rounded-full group-hover:bg-white/20 dark:group-hover:bg-white/30 transition-colors">
                 <Play className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 fill-white keep-white ml-0.5" />
               </div>
-              How It Works
+              কীভাবে কাজ করে
             </a>
           </div>
         </motion.div>

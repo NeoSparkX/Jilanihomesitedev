@@ -273,14 +273,13 @@ export default function FeaturedListings() {
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 space-y-3 sm:space-y-4">
           <h2 className="font-['Space_Grotesk'] text-3xl md:text-5xl font-bold text-white">
-            Premium Spaces,{' '}
+            প্রিমিয়াম স্পেস,{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#60A5FA]">
-              Verified
+              শতভাগ যাচাইকৃত
             </span>
           </h2>
           <p className="text-gray-400 text-base sm:text-lg px-2 sm:px-0">
-            Browse pricing, features & approximate location for free. Unlock the exact address and
-            contact details when you're ready to move forward.
+            আপনার প্রয়োজন অনুযায়ী বাছাই করা ভালো জায়গাগুলো দেখে নিন।
           </p>
         </div>
 
@@ -337,7 +336,7 @@ export default function FeaturedListings() {
         {/* View all CTA */}
         <div className="mt-10 sm:mt-12 flex justify-center">
           <Link href="/listings"
-            className="text-white bg-black/60 dark:bg-transparent border border-white/20 hover:bg-black/70 dark:hover:bg-white/5 hover:border-white/40 px-8 py-3 rounded-full text-sm font-semibold transition-all backdrop-blur-sm keep-white"
+            className="text-white bg-[#3B82F6] hover:bg-[#2563EB] px-10 py-3.5 rounded-full text-sm font-bold transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-0.5 keep-white"
           >
             View All Listings
           </Link>

@@ -4,7 +4,7 @@ This document outlines the design language, aesthetic philosophy, and styling gu
 
 ## 1. Design Philosophy
 Jilani Home is designed to feel like a **premium, exclusive, and high-end tech platform** while maintaining the accessibility of a modern marketplace. The interface leans heavily into modern web design trends:
-- **Dark-Mode First:** The default aesthetic is a sleek, deep-dark environment that makes property imagery pop.
+- **Light-Mode First:** The default aesthetic is a clean, bright, high-legibility light environment with a sleek dark mode alternative.
 - **Glassmorphism:** Widespread use of translucent panels with heavy background blur to create depth and hierarchy without harsh borders.
 - **Bento Box Layouts:** UI elements (like the Navbar and property cards) are compartmentalized into soft-rounded, floating "bento" containers.
 - **Fluid Motion:** Smooth, physics-based micro-animations for interactions, scrolling, and page reveals.

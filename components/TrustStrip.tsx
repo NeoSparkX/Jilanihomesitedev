@@ -6,7 +6,7 @@ const trustItems = [
   "Verified Listings",
   "6-Month Access",
   "Direct Owner Contact",
-  "No Hidden Commission"
+  "Purchase and own a listing today"
 ];
 
 export default function TrustStrip() {
