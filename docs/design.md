@@ -79,3 +79,23 @@ The theme system bypasses standard CSS media queries in favor of a strictly cont
 1. **State:** Stored in `localStorage` and managed by `ThemeProvider.tsx`.
 2. **SSR Guard:** A safe `localStorage` polyfill sits in `app/layout.tsx` to prevent Node 25 crashes, while `suppressHydrationWarning` on the `<html>` tag prevents React from panicking when the client injects the `.dark` or `.light` class.
 3. **Utility overrides:** Light mode is enforced by overriding specific Tailwind arbitrary values (e.g., `html.light .bg-[#0D0D0D] { background-color: #FFFFFF !important; }`) in `globals.css`. This allows developers to write dark-first Tailwind classes in JSX without polluting the markup with dozens of `dark:` prefixes.
+
+---
+
+## 7. Dashboard & Executive UI
+
+The dashboard system introduces a specialized **"Executive Dark"** theme variant specifically for the premium member and administrator experience.
+
+### Layout Architecture
+- **Fixed Sidebar System:** Uses a `h-screen overflow-hidden` wrapper on the layout to lock the sidebar in place while allowing the main content area to scroll independently.
+- **Component Density:** Increased data density for the admin dashboard using smaller font sizes (`text-[10px]` for labels) and optimized grid spacing.
+
+### Card Variants
+- **Horizontal Gallery Card:** A specialized listing card for "Saved Listings" that places a property image and 4 thumbnails on the left, with detailed metadata and actions on the right.
+- **Metric Cards:** Uses a specialized version of `GlassCard` with `#0B1121` background and animated pulse indicators for real-time status.
+
+### Currency & Localization
+- The platform uses BDT (৳) as the default currency for all financial metrics and payouts, ensuring context-aware financial reporting.
+
+### Security UI
+- **Security Sentinel:** A high-impact gradient card system (`from-slate-900 to-blue-950`) used to communicate platform security status, featuring verified integrity badges and sentinel monitoring icons.

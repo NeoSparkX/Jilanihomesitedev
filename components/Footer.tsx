@@ -31,7 +31,7 @@ export default function Footer() {
               <span className="font-['Space_Grotesk'] font-bold text-2xl tracking-wide text-white">Jilani Home</span>
             </div>
             <p className="text-gray-500 text-sm max-w-sm leading-relaxed">
-              The premium gated marketplace for verified office spaces and event halls. Connect directly, pay once, and secure your perfect venue.
+              The premium gated marketplace for verified office spaces and event halls. Connect directly, pay once and secure your perfect venue.
             </p>
           </div>
 

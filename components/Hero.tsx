@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Play, Truck, Home, Search, Clock } from 'lucide-react';
 
